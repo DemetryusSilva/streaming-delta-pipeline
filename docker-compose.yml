@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  spark:
+    image: bitnami/spark:3.4.1
+    environment:
+      - SPARK_MODE=master
+    volumes:
+      - .:/opt/bitnami/spark/work
+    ports:
+      - "8080:8080"
+      - "4040:4040"
